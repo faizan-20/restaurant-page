@@ -1,8 +1,12 @@
-const HomePage = (() => {
+const MainPage = (() => {
     const container = document.querySelector('#content');
+    const home = document.createElement('div');
+    home.classList.add('homeButton');
+    container.appendChild(home);
+
     const header = document.createElement('div');
     header.classList.add('header');
-    container.appendChild(header);
+    home.appendChild(header);
 
     const nav = document.createElement('div');
     nav.classList.add('nav');
@@ -15,6 +19,9 @@ const HomePage = (() => {
     const navChild1 = document.createElement('ul');
     const navChild2 = document.createElement('ul');
     const navChild3 = document.createElement('ul');
+    navChild1.classList.add('home');
+    navChild2.classList.add('menu');
+    navChild3.classList.add('contact');
 
     navList.append(navChild1);
     navList.append(navChild2);
@@ -27,16 +34,11 @@ const HomePage = (() => {
     const heading = document.createElement('div');
     heading.classList.add('heading');
     heading.textContent = 'Catpucchin Cafe';
-    header.appendChild(heading);
+    nav.appendChild(heading);
 
     const main = document.createElement('div');
     main.classList.add('main');
-    container.appendChild(main);
-
-    const about = document.createElement('div');
-    about.classList.add('about');
-    main.appendChild(about);
-    about.textContent = "About: Some random placeholder text that is long enough to see what's going on. note to self: PLEASE UPDATE IT";
+    home.appendChild(main);
 });
 
-export default HomePage;
+export default MainPage;

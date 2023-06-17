@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --base: rgb(30, 30, 46)
 }
 
 li {
@@ -11,21 +12,49 @@ li {
 
 ul{
     margin: 20px;
+    font-size: 1.2rem;
+    padding: 5px;
 }
 
-#content{
+.homeButton{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.heading{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
+.header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.about{
-    margin-top: 50px;
-    width: 25vw;
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--base);
+    width: 100dvw;
+    color: rgb(205, 214, 244);
+}
+
+.heading{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.main {
+    flex: 1;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about, .menu-items, .contact-info{
+    margin-top: 60px;
+    width: 70vw;
+    font-size: 1.5rem;
 }
